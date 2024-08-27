@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normilizr.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Prak9</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="portal__side portal__side--left">
+            <div class="icon"></div>
+            <h1 class="portal__title">Welcome to the Mass Save Application Portal</h1>
+            <p class="portal__text">The Mass Save program helps residents and businesses save energy and money by providing rebates, incentives, and tips on energy efficiency.</p>
+            <button class="portal__button">
+                <div class="portal__button-img"></div>
+                <div class="portal__button-text">Download Available Incentives </div>
+            </button>
+            <div class="portal__footer">Other Opportunities</div>
+        </div>
+        <div class="portal__side portal__side--right">
+            <h2 class="portal__form-title">Sign in to your Mass Save Application Portal account</h2>
+            <button class="portal__button portal__button--google">
+                <div class="portal__button--google-img">
+            </div>
+        <div class="portal__button--google-text">
+            Sign In With Google
+        </div></button>
+        <div class="or">Or</div>
+            <form action="" class="form">
+<div class="input__group">
+    <label for="email" class="lable">Email</label>
+    <div class="error email__error">
+        Email has not been entered</div>
+            <input class="portal__input email" type="email" placeholder="Enter Email" id="email">
+        </div>
+        <div class="input__group">
+            <label for="password" class="lable">Password</label>
+            <div class="error password__error">
+                Password has not been entered</div>
+            <input class="portal__input password" type="password" placeholder="Enter Password" id="password">
+        </div>
+        <div class="input__group-short">
+            <label for="name" class="lable">First Name</label>
+            <div class="error error_short name__error">
+                First Name has not been entered</div>
+                    <input class="portal__input name" type="text" placeholder="Name" id="name">
+                </div>
+        <div class="input__group-short">
+                    <label for="lastname" class="lable">Last Name</label>
+                    <div class="error error_short lastname__error">
+                        Last Name has not been entered</div>
+                    <input class="portal__input lastname" type="text" placeholder="Lastname" id="lastname">
+                </div>
+                <div class="input__group-short">
+                    <label for="company" class="lable">Company Name</label>
+                    <div class="error error_short company__error">
+                        Company Name has not been entered</div>
+                            <input class="portal__input company" type="text" id="company">
+                        </div>
+                        <div class="input__group-short">
+                            <label for="number" class="lable">Phone Number</label>
+                            <div class="error error_short number__error">
+                                Phone Number has not been entered</div>
+                            <input class="portal__input number" type="tel" placeholder="+1 234 567 89 90" id="number">
+                        </div>
+                        <div class="input__group">
+                            <label for="adress" class="lable">Adress</label>
+                            <div class="error adress__error">
+                                Adress has not been entered</div>
+                            <input class="portal__input adress" type="text" id="adress">
+                        </div>
+                <button class="signup__button-2">Sign Up</button>
+          
+        </form>
+        </div>
+    </div>
+    <script>
+            document.querySelector('.form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var errors = document.querySelectorAll('.error');
+        errors.forEach(function(error) {
+            error.style.display = 'none';
+        });
+
+        var email = document.querySelector('.email').value;
+            if (!email) {
+                document.querySelector('email__error').style.display = 'block';
+            }
+    
+          
+            var password = document.querySelector('.password').value;
+            if (!password) {
+                document.querySelector('.password__error').style.display = 'block';
+            }
+
+            var name = document.querySelector('.name').value;
+            if (!name) {
+                document.querySelector('.name__error').style.display = 'block';
+            }
+            var lastname = document.querySelector('.lastname').value;
+            if (!lastname) {
+                document.querySelector('.lastname__error').style.display = 'block';
+            }
+            var company = document.querySelector('.company').value;
+            if (!company) {
+                document.querySelector('.company__error').style.display = 'block';
+            }
+            var number = document.querySelector('.number').value;
+            if (!number) {
+                document.querySelector('.number__error').style.display = 'block';
+            }
+            var adress = document.querySelector('.adress').value;
+            if (!adress) {
+                document.querySelector('.adress__error').style.display = 'block';
+            }
+            
+
+        if (password && email && name && lastname && company && number && adress) {
+           
+            event.target.submit();
+        }
+    });
+            
+    </script>
+</body>
+</html>

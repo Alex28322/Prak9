@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normilizr.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Prak9</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="portal__side portal__side--left">
+            <div class="icon"></div>
+            <h1 class="portal__title">Welcome to the Mass Save Application Portal</h1>
+            <p class="portal__text">The Mass Save program helps residents and businesses save energy and money by providing rebates, incentives, and tips on energy efficiency.</p>
+            <button class="portal__button">
+                <div class="portal__button-img"></div>
+                <div class="portal__button-text">Download Available Incentives </div>
+            </button>
+            <div class="portal__footer">Other Opportunities</div>
+        </div>
+        <div class="portal__side portal__side--right">
+            <h2 class="portal__form-title">Sign in to your Mass Save Application Portal account</h2>
+            <button class="portal__button portal__button--google">
+                <div class="portal__button--google-img">
+            </div>
+        <div class="portal__button--google-text">
+            Sign In With Google
+        </div></button>
+        <div class="or">Or</div>
+            <form action="" class="form">
+<div class="input__group">
+    <label for="email" class="lable">Email</label>
+    <div class="error email__error">
+        Email has not been entered</div>
+            <input class="portal__input email" type="email" placeholder="Enter Email" id="email">
+        </div>
+        <div class="input__group">
+            <label for="password" class="lable">Password</label>
+            <div class="error password__error">
+                Password has not been entered</div>
+            <input class="portal__input password" type="password" placeholder="Enter Password" id="password">
+        </div>
+            <div class="portal__form-footer">
+                <a href="#" class="portal__link">Forgot your password?</a>
+                <button class="portal__button-green">Sign In</button>
+                <button class="portal__button-blue">Proceed as guest</button>
+            </div>
+        </form>
+        <label for="signed" class="right__lable">Keep Me Signed In</label>
+        <input type="checkbox" id="signed" class="checkbox">
+        <div class="right__footer">
+        <a href="" class="signup__link">Don`t have an account?</a>
+        <a href="signup.html" class="signup__button">Sign Up</a>
+    </div>
+        </div>
+    </div>
+    <script>
+            document.querySelector('.form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var errors = document.querySelectorAll('.error');
+        errors.forEach(function(error) {
+            error.style.display = 'none';
+        });
+
+        var email = document.querySelector('.email').value;
+            if (!email) {
+                document.querySelector('email__error').style.display = 'block';
+            }
+    
+          
+            var password = document.querySelector('.password').value;
+            if (!password) {
+                document.querySelector('.password__error').style.display = 'block';
+            }
+
+        if (password && email) {
+           
+            event.target.submit();
+        }
+    });
+            
+    </script>
+</body>
+</html>
