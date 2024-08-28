@@ -215,6 +215,7 @@
   color: #fff;
   display: inline-block;
   border-radius: 8px;
+  transition: 0.1s;
 }
 
 .right__footer {
@@ -232,8 +233,10 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked ~ label:first-of-type {
-  background-color: #474E66;
+input[type=checkbox]:checked ~ label::after {
+  background: url("../img/check.png") center no-repeat;
+  background-size: contain;
+  background-color: #5C9F08;
 }
 
 .signup__button {
